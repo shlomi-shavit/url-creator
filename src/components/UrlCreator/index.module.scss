@@ -1,0 +1,144 @@
+$dropDownHeigth: 30px;
+
+.url_creator {
+
+    &__container {
+        // border: solid 1px #b9b9b9;
+        width: 800px;
+        min-height: 200px;
+        margin: auto;
+        max-height: 500px;
+    }
+
+    &__dashboard {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: $dropDownHeigth;
+        font-size: 12px;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__label {
+        height: 100%;
+        width: 20%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__dropDown {
+        height: 100%;
+        width: 20%;
+        border: solid 1px #b9b9b9;
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            background: #fff;
+            z-index: 1;
+            position: relative;
+
+            li {
+                border: solid 1px #b9b9b9;
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                cursor: pointer;
+                &:hover {
+                    background: blue;
+                    color: #fff;
+                }
+
+                &.disabled {
+                    background: #f3f3f3;
+                    color: #b3b1b1;
+                    // pointer-events: none;
+                }
+            }
+        }
+    }
+
+    &__urlInput {
+        width: 50%;
+        height: 100%;
+
+        input {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            box-sizing: border-box;
+            padding-left: 10px
+        }
+        
+        &__errorMessage {
+            color: red;
+            text-align: left;
+            padding: 2px 0;}
+    }
+
+    &__addButton {
+        width: 7%;
+        min-width: 40px;
+        background: blue;
+        color: #fff;
+        border: none;
+        border-radius: 15px;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    &__selectedUrl {
+        display: flex;
+        padding-left: 10px;
+        align-items: center;
+        pointer-events: none;
+        height: 100%;
+        font-size: 12px;
+    }
+
+    &__urlBlock {
+        display: flex;
+        margin: 15px 0 10px 21%;
+        padding-left: 10px;
+        font-size: 12px;
+        text-align: left;
+
+        &__label {
+            width: 100px;
+            display: flex;
+            align-items: center;
+        }
+        &__urls_container {
+            border: solid 1px #ccc;
+            height: 80px;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            position: relative;
+            right: -30px;
+            display: flex;
+        }
+        &__url {
+            background: #e3e3e3;
+            padding: 3px 10px;
+            border-radius: 5px;
+            height: 18px;
+            display: flex;
+        }
+
+        &__remove_url {
+            color: #3e3e3e;
+            width: 16px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            margin-left: 5px;
+            font-size: 14px;
+            line-height: 15px;
+            cursor: pointer;
+        }
+    }
+}
